@@ -1,0 +1,15 @@
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\bin\Debug\Time table.exe.config
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\bin\Debug\Time table.exe
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\bin\Debug\Time table.pdb
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table.csprojResolveAssemblyReference.cache
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\MainWindow.baml
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\MainWindow.g.cs
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\App.g.cs
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table_MarkupCompile.cache
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table.g.resources
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time_table.Properties.Resources.resources
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table.csproj.GenerateResource.Cache
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table.exe
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\obj\Debug\Time table.pdb
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\bin\Debug\TimeTableEntities.dll
+c:\users\ifeyinwa\documents\visual studio 2013\Projects\Time table\Time table\bin\Debug\TimeTableEntities.pdb

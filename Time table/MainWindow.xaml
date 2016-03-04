@@ -1,0 +1,56 @@
+﻿<Window x:Class="TimeTable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FGGCO Time Table" Height="730" Width="1310.94">
+    <Grid Margin="0,0,0,40">
+        <Grid Height="518" Margin="10,10,11,0" VerticalAlignment="Top" RenderTransformOrigin="0.344,-1.19">
+            <DataGrid Margin="9,47,5,0" VerticalAlignment="Top" Height="464" Name="scheduleDataGrid" RenderTransformOrigin="0.5,0.5">
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.157"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.744"/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
+            </DataGrid>
+            <TextBlock HorizontalAlignment="Left" Margin="10,4,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="38" Width="813" FontSize="18" TextAlignment="Center"/>
+        </Grid>
+        <Grid Height="141" Margin="10,533,0,0" Width="1283" RenderTransformOrigin="0.582,-0.043" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+            <StackPanel HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="1040"  Orientation="Horizontal" Margin="10,0,0,0">
+                <Label Content="Class" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Teacher" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Subject" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Day" Width="145" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Period/Week" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Period" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Elective code" Width="147" Margin="0,0,0,0" FontSize="14"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Height="38" Margin="10,80,0,0" VerticalAlignment="Top" Width="480" Orientation="Horizontal">
+                <Button Content="Add" Margin="0,0,10,0" Width="88" Background="#FF7361E4" Name="btnAdd"/>
+                <Button Content="Edit" Width="86" Margin="0,0,10,0" Background="#FF170C09" Foreground="White" Name="btnEdit"/>
+                <Button Content="Delete" Width="86"   Margin="0,0,10,0" Background="#FFCB4118" Name="btnDelete"/>
+                <Button Content="Clear " Width="86"  Margin="0,0,10,0" Name="btnClear"/>
+                <Button Content="Print " Width="86"  Margin="0,0,10,0" Background="#FF4BC113" Name="btnPrint"/>
+            </StackPanel>
+
+            <Label Content="Manage schedule" FontSize="14" Margin="10,-6,1123,248"/>
+            <StackPanel HorizontalAlignment="Left" Height="36" Margin="10,30,0,0" VerticalAlignment="Top" Width="1040" Orientation="Horizontal">
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0"  Name="tbClass"/>
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbTeacher"/>
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbSubject"/>
+                <ComboBox Width="145" Height="32" Margin="0,2,2,0" Name="cmbDay"
+                          Loaded="CmbDay_Loaded" />
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbPeriodPerWeek" />
+                <ComboBox Width="145" Height="32" VerticalAlignment="Top" Margin="0,2,2,0" Name="cmbPeriod" Loaded="CmbPeriod_Loaded"  />
+                <TextBox Height="32" Width="145" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" x:Name="tbElective" />
+
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" Margin="1072,0,0,0" TextWrapping="Wrap" Text="Erro Message" VerticalAlignment="Top" Height="118" Width="201" Name="tbValidation"/>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
