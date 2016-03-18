@@ -1,55 +1,206 @@
 ﻿<Window x:Class="TimeTable.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="FGGCO Time Table" Height="730" Width="1310.94">
-    <Grid Margin="0,0,0,40">
-        <Grid Height="518" Margin="10,10,11,0" VerticalAlignment="Top" RenderTransformOrigin="0.344,-1.19">
-            <DataGrid Margin="9,47,5,0" VerticalAlignment="Top" Height="464" Name="scheduleDataGrid" RenderTransformOrigin="0.5,0.5">
-                <DataGrid.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="0.157"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="0.744"/>
-                    </TransformGroup>
-                </DataGrid.RenderTransform>
-            </DataGrid>
-            <TextBlock HorizontalAlignment="Left" Margin="10,4,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="38" Width="813" FontSize="18" TextAlignment="Center"/>
-        </Grid>
-        <Grid Height="141" Margin="10,533,0,0" Width="1283" RenderTransformOrigin="0.582,-0.043" VerticalAlignment="Top" HorizontalAlignment="Left">
+         xmlns:local="clr-namespace:TimeTable"
+        Title="Federal Government Girls' College Onitsha - Time Table" Height="730" Width="1338.94" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" >
+    <!--<Window.Resources>
+        <local:StringConverter x:Key="StringConverter" />
+    </Window.Resources>-->
+    <Grid Margin="0,0,0,5">
+        <Grid Height="523" Margin="10,10,11,0" VerticalAlignment="Top" >
+            <Button Background="#FFFFFF" BorderThickness="0" Height="46" Width="55" Name="btnPrint" ToolTip="print time table" Margin="1217,0,10,472" >
+                <StackPanel >
+                    <Image Source="Images/print_icon.png" Height="45" Width="46" />
+                </StackPanel>
+            </Button>
+            <StackPanel HorizontalAlignment="Left" Height="46" Margin="10,0,0,0" VerticalAlignment="Top" Width="1262">
+                <ComboBox Margin="0,0,934,0" Name="cmbTimeTableFormat" Loaded="CmbTimeTableFormat_Loaded" FontWeight="Bold" />
+                
 
-            <StackPanel HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="1040"  Orientation="Horizontal" Margin="10,0,0,0">
+            </StackPanel>
+
+
+            <DataGrid Margin="0,81,0,0"  AutoGenerateColumns="False" VerticalAlignment="Top" Height="430" Name="GeneralDataGrid" FontSize="9" 
+                      IsSynchronizedWithCurrentItem="False"  CanUserReorderColumns="False" AreRowDetailsFrozen="True" SelectionMode="Single"   
+                      RowHeight="20" CanUserResizeColumns="False" MaxWidth="1300" RowBackground="White" AlternatingRowBackground="LightBlue"
+                      CanUserSortColumns = "False" SelectionUnit="Cell"  SelectionChanged="GeneralDataGrid_SelectionChanged" SelectedCellsChanged="GeneralDataGrid_SelectedCellsChanged">
+
+                <!--<DataGrid.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="{x:Type GroupItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    --><!--<TextBlock Text="{Binding Name}" />-->
+                                                    <!--<TextBlock Text="{Binding ItemCount, StringFormat=Count: {0}}" Margin="30,0,0,0" />--><!--
+                                                </StackPanel>
+                                                <ItemsPresenter />
+                                            </StackPanel>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                </DataGrid.GroupStyle>-->
+
+
+
+
+
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Class" Width="1.5*" IsReadOnly="True" Binding="{Binding Class}"   />
+
+                    <DataGridTextColumn Header="1" Width="*" IsReadOnly="True"  Binding="{Binding MP1}" />
+                    <DataGridTextColumn Header="2" Width="*" IsReadOnly="True"  Binding="{Binding MP2}"   />
+                    <DataGridTextColumn Header="3" Width="*" IsReadOnly="True"  Binding="{Binding MP3}"  />
+                    <DataGridTextColumn Header="4" Width="*" IsReadOnly="True"   Binding="{Binding MP4}" />
+                    <DataGridTextColumn Header="5" Width="*" IsReadOnly="True"  Binding="{Binding MP5}" />
+                    <DataGridTextColumn Header="6" Width="*" IsReadOnly="True"  Binding="{Binding MP6}" />
+                    <DataGridTextColumn Header="7" Width="*" IsReadOnly="True"   Binding="{Binding MP7}"/>
+                    <DataGridTextColumn Header="8" Width="*" IsReadOnly="True"   Binding="{Binding MP8}"/>
+                    <DataGridTextColumn Header="9" Width="*" IsReadOnly="True"   Binding="{Binding MP9}" />
+                     
+                    <!--tue-->
+                    <DataGridTextColumn Header="1" Width="*" IsReadOnly="True"  Binding="{Binding TP1}" />                    
+                    <DataGridTextColumn Header="2" Width="*" IsReadOnly="True" Binding="{Binding TP2}" />
+                    <DataGridTextColumn Header="3" Width="*" IsReadOnly="True" Binding="{Binding TP3}" />
+                    <DataGridTextColumn Header="4" Width="*" IsReadOnly="True" Binding="{Binding TP4}" />
+                    <DataGridTextColumn Header="5" Width="*" IsReadOnly="True" Binding="{Binding TP5}"  />
+                    <DataGridTextColumn Header="6" Width="*" IsReadOnly="True" Binding="{Binding TP6}"  />
+                    <DataGridTextColumn Header="7" Width="*" IsReadOnly="True" Binding="{Binding TP7}"  />
+                    <DataGridTextColumn Header="8" Width="*" IsReadOnly="True" Binding="{Binding TP8}" />
+                    <DataGridTextColumn Header="9" Width="*" IsReadOnly="True" Binding="{Binding TP9}" />
+
+<!--wed-->
+                    <DataGridTextColumn Header="1" Width="*" IsReadOnly="True" Binding="{Binding WP1}"   />
+                    <DataGridTextColumn Header="2" Width="*" IsReadOnly="True" Binding="{Binding WP2}"  />
+                    <DataGridTextColumn Header="3" Width="*" IsReadOnly="True" Binding="{Binding WP3}"  />
+                    <DataGridTextColumn Header="4" Width="*" IsReadOnly="True" Binding="{Binding WP4}"  />
+                    <DataGridTextColumn Header="5" Width="*" IsReadOnly="True" Binding="{Binding WP5}"  />
+                    <DataGridTextColumn Header="6" Width="*" IsReadOnly="True" Binding="{Binding WP6}"  />
+                    <DataGridTextColumn Header="7" Width="*" IsReadOnly="True" Binding="{Binding WP7}"  />
+                    <DataGridTextColumn Header="8" Width="*" IsReadOnly="True" Binding="{Binding WP8}"  />
+                    <DataGridTextColumn Header="9" Width="*" IsReadOnly="True" Binding="{Binding WP9}"  />
+
+<!--thur-->
+                    <DataGridTextColumn Header="1" Width="*" IsReadOnly="True"  Binding="{Binding THP1}" />
+                    <DataGridTextColumn Header="2" Width="*" IsReadOnly="True"  Binding="{Binding THP2}" />
+                    <DataGridTextColumn Header="3" Width="*" IsReadOnly="True"  Binding="{Binding THP3}"/>
+                    <DataGridTextColumn Header="4" Width="*" IsReadOnly="True"  Binding="{Binding THP4}"/>
+                    <DataGridTextColumn Header="5" Width="*" IsReadOnly="True"  Binding="{Binding THP5}"/>
+                    <DataGridTextColumn Header="6" Width="*" IsReadOnly="True"  Binding="{Binding THP6}"/>
+                    <DataGridTextColumn Header="7" Width="*" IsReadOnly="True"  Binding="{Binding THP7}"/>
+                    <DataGridTextColumn Header="8" Width="*" IsReadOnly="True"  Binding="{Binding THP8}" />
+                    <DataGridTextColumn Header="9" Width="*" IsReadOnly="True"  Binding="{Binding THP9}"/>
+
+<!--fri-->
+                    <DataGridTextColumn Header="1" Width="*" IsReadOnly="True" Binding="{Binding FP1}"/>
+                    <DataGridTextColumn Header="2" Width="*" IsReadOnly="True" Binding="{Binding FP2}" />
+                    <DataGridTextColumn Header="3" Width="*" IsReadOnly="True" Binding="{Binding FP3}"/>
+                    <DataGridTextColumn Header="4" Width="*" IsReadOnly="True" Binding="{Binding FP4}"/>
+                    <DataGridTextColumn Header="5" Width="*" IsReadOnly="True" Binding="{Binding FP5}"/>
+                    <DataGridTextColumn Header="6" Width="*" IsReadOnly="True" Binding="{Binding FP6}" />
+                    <DataGridTextColumn Header="7" Width="*" IsReadOnly="True" Binding="{Binding FP7}" />
+                    <DataGridTextColumn Header="8" Width="*" IsReadOnly="True" Binding="{Binding FP8}"/>
+                    <DataGridTextColumn Header="9" Width="*" IsReadOnly="True" Binding="{Binding FP9}"/>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+            <ListView Height="22" Margin="0,59,0,0" VerticalAlignment="Top" Name="overallListview"  MaxWidth="1300" FontSize="14" FontWeight="Bold">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Monday" Width="295"   />
+                        <GridViewColumn Header="Tuesday" Width="250"  />
+                        <GridViewColumn Header="Wednesday" Width="250"  />
+                        <GridViewColumn Header="Thursday" Width="250"  />
+                        <GridViewColumn Header="Friday" Width="250"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+        <Grid Height="161" Margin="10,533,0,0" Width="1283" RenderTransformOrigin="0.582,-0.043" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid.Resources>
+                <ImageBrush x:Key="AddButtonImageBrush" ImageSource="/Images/add_icon.png" Stretch="UniformToFill"/>
+            </Grid.Resources>
+
+            <StackPanel HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="906"  Orientation="Horizontal" Margin="10,0,0,0">
                 <Label Content="Class" Width="147" Margin="0,0,0,0" FontSize="14"/>
                 <Label Content="Teacher" Width="147" Margin="0,0,0,0" FontSize="14"/>
                 <Label Content="Subject" Width="147" Margin="0,0,0,0" FontSize="14"/>
-                <Label Content="Day" Width="145" Margin="0,0,0,0" FontSize="14"/>
-                <Label Content="Period/Week" Width="147" Margin="0,0,0,0" FontSize="14"/>
-                <Label Content="Period" Width="147" Margin="0,0,0,0" FontSize="14"/>
                 <Label Content="Elective code" Width="147" Margin="0,0,0,0" FontSize="14"/>
+                <Label Content="Period/Week" Width="147" Margin="0,0,0,0" FontSize="14" Height="32"/>
+
             </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Height="38" Margin="10,80,0,0" VerticalAlignment="Top" Width="480" Orientation="Horizontal">
-                <Button Content="Add" Margin="0,0,10,0" Width="88" Background="#FF7361E4" Name="btnAdd"/>
+
+            <StackPanel HorizontalAlignment="Left" Height="46" Margin="10,71,0,0" VerticalAlignment="Top" Width="251" Orientation="Horizontal">
+                <!--<Button Content="Add" Margin="0,0,10,0" Width="88" Background="#FF7361E4" Name="btnAd" />
                 <Button Content="Edit" Width="86" Margin="0,0,10,0" Background="#FF170C09" Foreground="White" Name="btnEdit"/>
                 <Button Content="Delete" Width="86"   Margin="0,0,10,0" Background="#FFCB4118" Name="btnDelete"/>
-                <Button Content="Clear " Width="86"  Margin="0,0,10,0" Name="btnClear"/>
-                <Button Content="Print " Width="86"  Margin="0,0,10,0" Background="#FF4BC113" Name="btnPrint"/>
+                <Button Content="Clear " Width="86"  Margin="0,0,10,0" Name="btnClear" Click="btnClear_Click"/>
+                <Button Content="Print " Width="86"  Margin="0,0,10,0" Background="#FF4BC113" Name="btnPrint"/>-->
+                <Button Background="#FFFFFF" BorderThickness="0" Width="55" Name="btnAdd" Margin="0,0,5,0" Click="AddSchedule">
+                    <StackPanel >
+                        <Image Source="Images/add_icon.png" Height="45" Width="46" ToolTip="add new schedule"/>
+                    </StackPanel>
+                </Button>
+                <Button Background="#FFFFFF" BorderThickness="0" Width="55" Name="btnEdit" ToolTip="modify existing schedule" Margin="0,0,5,0">
+                    <StackPanel >
+                        <Image Source="Images/edit_icon.png" Height="45" Width="46" />
+                    </StackPanel>
+                </Button>
+                <Button Background="#FFFFFF" BorderThickness="0" Width="55" Name="btnClear" ToolTip="clear fields" Margin="0,0,5,0"  Click="btnClear_Click">
+                    <StackPanel >
+                        <Image Source="Images/clear_3_icon.png" Height="45" Width="46" />
+                    </StackPanel>
+                </Button>
+                <Button Background="#FFFFFF" BorderThickness="0" Width="55" Name="btnDelete" ToolTip="delete schedule from table" >
+                    <StackPanel >
+                        <Image Source="Images/delete_2_icon.png" Height="45" Width="46" />
+                    </StackPanel>
+                </Button>
+
             </StackPanel>
 
-            <Label Content="Manage schedule" FontSize="14" Margin="10,-6,1123,248"/>
-            <StackPanel HorizontalAlignment="Left" Height="36" Margin="10,30,0,0" VerticalAlignment="Top" Width="1040" Orientation="Horizontal">
-                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0"  Name="tbClass"/>
-                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbTeacher"/>
-                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbSubject"/>
-                <ComboBox Width="145" Height="32" Margin="0,2,2,0" Name="cmbDay"
-                          Loaded="CmbDay_Loaded" />
-                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbPeriodPerWeek" />
-                <ComboBox Width="145" Height="32" VerticalAlignment="Top" Margin="0,2,2,0" Name="cmbPeriod" Loaded="CmbPeriod_Loaded"  />
-                <TextBox Height="32" Width="145" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" x:Name="tbElective" />
+            <StackPanel HorizontalAlignment="Left" Height="36" Margin="10,30,0,0" VerticalAlignment="Top" Width="906" Orientation="Horizontal">
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="SS1H" FontSize="14" Margin="0,2,2,0"  Name="tbClass" GotFocus="tb_GotFocus"/>
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="Ugochukwu S.N" FontSize="14" Margin="0,2,2,0" Name="tbTeacher" GotFocus="tb_GotFocus"/>
+                <TextBox Height="32" Width="147" TextWrapping="Wrap" Text="AFT" FontSize="14" Margin="0,2,2,0" Name="tbSubject" GotFocus="tb_GotFocus"/>
+                <TextBox Height="32" Width="145" TextWrapping="Wrap" Text="SSIBUS1" FontSize="14" Margin="0,2,2,0" x:Name="tbElective" />
+                <ComboBox Width="145" Height="32" Margin="0,2,2,0" Name="cmbPeriodPerWeek" Loaded="CmbPeriod_Loaded" GotFocus="tb_GotFocus"/>
 
             </StackPanel>
-            <TextBlock HorizontalAlignment="Left" Margin="1072,0,0,0" TextWrapping="Wrap" Text="Erro Message" VerticalAlignment="Top" Height="118" Width="201" Name="tbValidation"/>
+            <TextBlock HorizontalAlignment="Left" Margin="975,0,0,0" TextWrapping="Wrap" Text="Erro Message" VerticalAlignment="Top" Height="131" Width="298" Name="tbValidation" FontSize="14" />
+            <TextBox HorizontalAlignment="Left" Height="14" TextWrapping="Wrap" Text="copyright &#x00A9; ifeyinwa Ezenyimulu - 2016 " VerticalAlignment="Top" Width="558" Margin="250,147,0,0" FontStyle="Italic" TextAlignment="Center" BorderThickness="0" FontSize="9"/>
+            <StackPanel HorizontalAlignment="Left" Height="20" Margin="0,122,0,0" VerticalAlignment="Top" Width="251" Orientation="Horizontal">
+                <TextBox HorizontalAlignment="Left" Height="18" TextWrapping="Wrap" Text="Add" VerticalAlignment="Top" Width="54" FontSize="10" TextAlignment="Center" BorderThickness="0" Margin="0,0,10,0"/>
+                <TextBox Height="18" TextWrapping="Wrap" Text="Edit" Margin="0,0,10,0" Width="54" TextAlignment="Center" BorderThickness="0"/>
+                <TextBox Height="18" TextWrapping="Wrap" Text="Clear" Margin="0,0,10,0" Width="54" TextAlignment="Center" BorderThickness="0"/>
+                <TextBox Height="18" TextWrapping="Wrap" Text="Delete" Margin="0,0,10,0" Width="54" TextAlignment="Center" BorderThickness="0"/>
 
+            </StackPanel>
         </Grid>
+
 
 
     </Grid>

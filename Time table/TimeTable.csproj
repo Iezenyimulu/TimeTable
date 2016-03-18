@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,6 +57,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassComparer.cs" />
+    <Compile Include="Programme.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,6 +98,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\print_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete_2_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clear_3_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\clear_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
