@@ -1,0 +1,15 @@
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Release\Time table.exe.config
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Release\Time table.exe
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Release\Time table.pdb
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Release\TimeTableEntities.dll
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Release\TimeTableEntities.pdb
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\MainWindow.g.cs
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\App.g.cs
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\Time table_MarkupCompile.cache
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\Time table_MarkupCompile.lref
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\MainWindow.baml
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\Time table.g.resources
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\TimeTable.Properties.Resources.resources
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\TimeTable.csproj.GenerateResource.Cache
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\Time table.exe
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Release\Time table.pdb

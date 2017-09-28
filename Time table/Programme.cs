@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 
 namespace TimeTable {
-    public class Programme {
+    public abstract class Programme {
+
+      
+
         //public int Id { get; set; }
         public string Class { get; set; }
-        //public string Day { get; set; }
+        public string Day { get; set; }
         //public string Teacher { get; set; }
         public int Period { get; set; }
         public string Subject { get; set; }
@@ -18,7 +21,7 @@ namespace TimeTable {
 
    
 
-    public class GeneralProgramme {
+    public class GeneralProgramme : Programme {
         
        // http://stackoverflow.com/questions/10283206/c-sharp-setting-getting-the-class-properties-by-string-name
         public object this[string propertyName] {
@@ -39,10 +42,8 @@ namespace TimeTable {
 
         }
 
-        public string Class { get; set; }
-        //mon
-        //public string Subject { get; set; }
-        
+        public new string Class { get; set; }
+        //mon        
         public string MP1 { get; set; }
         public int MP1Id { get; set; }
         public string MP2 { get; set; }
@@ -144,6 +145,99 @@ namespace TimeTable {
         public int Period { get; set; }
         public string Subject { get; set; }
         public string Day { get; set; }
+}
+
+ 
+
+    public class ClassProgramme : Programme {
+
+        // http://stackoverflow.com/questions/10283206/c-sharp-setting-getting-the-class-properties-by-string-name
+        public object this[string propertyName] {
+            get {
+                // probably faster without reflection:
+                // like:  return Properties.Settings.Default.PropertyValues[propertyName] 
+                // instead of the following
+                Type myType = typeof(ClassProgramme);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                return myPropInfo.GetValue(this, null);
+            }
+            set {
+                Type myType = typeof(ClassProgramme);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                myPropInfo.SetValue(this, value, null);
+
+            }
+
+        }
+        public new string Class { get; set; }
+        public new int Period { get; set; }
+        public new string Subject { get; set; }
+        public new string Day { get; set; }
+        public string Recess { get; set; }
+        public string P1 { get; set; }
+        public int P1Id { get; set; }
+        public string P2 { get; set; }
+        public int P2Id { get; set; }
+        public string P3 { get; set; }
+        public int P3Id { get; set; }
+        public string P4 { get; set; }
+        public int P4Id { get; set; }
+        public string P5 { get; set; }
+        public int P5Id { get; set; }
+        public string P6 { get; set; }
+        public int P6Id { get; set; }
+        public string P7 { get; set; }
+        public int P7Id { get; set; }
+        public string P8 { get; set; }
+        public int P8Id { get; set; }
+        public string P9 { get; set; }
+        public int P9Id { get; set; }
+
     }
-    
+
+    public class TeacherProgramme : Programme {
+
+        // http://stackoverflow.com/questions/10283206/c-sharp-setting-getting-the-class-properties-by-string-name
+        public object this[string propertyName] {
+            get {
+                // probably faster without reflection:
+                // like:  return Properties.Settings.Default.PropertyValues[propertyName] 
+                // instead of the following
+                Type myType = typeof(TeacherProgramme);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                return myPropInfo.GetValue(this, null);
+            }
+            set {
+                Type myType = typeof(TeacherProgramme);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                myPropInfo.SetValue(this, value, null);
+
+            }
+
+        }
+        public new string Class { get; set; }
+        public new int Period { get; set; }
+        public new string Subject { get; set; }
+        public new string Day { get; set; }
+        public string Recess { get; set; }
+        public string P1 { get; set; }
+        public int P1Id { get; set; }
+        public string P2 { get; set; }
+        public int P2Id { get; set; }
+        public string P3 { get; set; }
+        public int P3Id { get; set; }
+        public string P4 { get; set; }
+        public int P4Id { get; set; }
+        public string P5 { get; set; }
+        public int P5Id { get; set; }
+        public string P6 { get; set; }
+        public int P6Id { get; set; }
+        public string P7 { get; set; }
+        public int P7Id { get; set; }
+        public string P8 { get; set; }
+        public int P8Id { get; set; }
+        public string P9 { get; set; }
+        public int P9Id { get; set; }
+
+    }
 }

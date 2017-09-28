@@ -59,6 +59,10 @@
     </ApplicationDefinition>
     <Compile Include="ClassComparer.cs" />
     <Compile Include="Programme.cs" />
+    <Compile Include="Models\SubjectModel.cs" />
+    <Compile Include="Models\SubjectPeriodPerWeekModel.cs" />
+    <Compile Include="SubjectValidationRule.cs" />
+    <Compile Include="Models\TeacherClassModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -13,7 +13,7 @@ namespace TimeTable {
             y = y.ToLower();
 
 
-            // js2a js1a || ss2a ss2a
+            // js2a js1a || ss2a ss2b
             if (x[0] == y[0]) {
                 if (x[2] > y[2])
                     return 1;

@@ -1,20 +1,20 @@
 C:\Users\Ifeyinwa\Documents\Visual Studio 2013\Projects\TimeTable\Time table\bin\Debug\Time table.exe.config
 C:\Users\Ifeyinwa\Documents\Visual Studio 2013\Projects\TimeTable\Time table\obj\Debug\Time table.exe
 C:\Users\Ifeyinwa\Documents\Visual Studio 2013\Projects\TimeTable\Time table\obj\Debug\Time table.pdb
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\Time table.exe.config
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\Time table.exe
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\Time table.pdb
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\Time table.exe.config
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\TimeTableEntities.dll
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\TimeTableEntities.pdb
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\MainWindow.baml
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\MainWindow.g.cs
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\App.g.cs
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table_MarkupCompile.cache
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table_MarkupCompile.lref
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\MainWindow.baml
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table.g.resources
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\TimeTable.Properties.Resources.resources
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\TimeTable.csproj.GenerateResource.Cache
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table.exe
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table.pdb
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\TimeTableEntities.dll
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\Time table_MarkupCompile.lref
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\bin\Debug\Time table.pdb
 C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\TimeTable.csprojResolveAssemblyReference.cache
+C:\Users\Ifeyinwa\Documents\GitHub\TimeTable\Time table\obj\Debug\GeneratedInternalTypeHelper.g.cs
